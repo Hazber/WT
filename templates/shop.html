@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Бухарик</title>
+	<link rel="shortcut icon" href="Images/Icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="CSS/Menu.css">
+</head>
+<body>
+</head>
+<body>
+
+    <header class="header">
+       
+		{% include 'header.html'%}
+    </header>
+    
+	<div class="section">
+		<div class="container">
+			<h2 class="title">{{ header_title }}</h2>
+			<div class="subtitle">Самый качественный алкоголь по самым низким ценам</div>
+			<nav class="filter-wraper">
+				<div class="container">
+					<div class="filter-navigation">
+						<!--<a href="#" class="adv__button">Connect to Us</a>-->
+			<form action="" class="subscribe">
+				<input type="text" class="subscribe__input" placeholder="Что вам нужно?">
+				<input type="submit" class="subscribe__button" value="Найти">
+			</form>
+			<form action="" class="sort">
+
+
+				<input type="radio" name="sort">
+				<label for="q2">По возрастанию цены</label><br>
+
+				<input  type="radio" name="sort">
+				<label for="q3">По убыванию цены</label><br>
+
+				<input  type="radio" name="sort">
+				<label for="q3">Акционный товар</label><br>
+			
+
+
+				<input type="submit" class="sort__button" value="Сортировать">
+			
+			</form>
+						<a href="#" class="filter_link">Водки и водки особые</a>
+						<a href="#" class="filter_link">Ликероводочные изделия</a>
+						<a href="#" class="filter_link">Виноматериал</a>
+						<a href="#" class="filter_link">Коньяк</a>
+						<a href="#" class="filter_link">Бренди</a>
+						<a href="#" class="filter_link">Пиво</a>
+					</div>
+				</div>
+			</nav>
+			
+			<div class="card-wrapper">
+			<div class="container">
+				<!--	{% for card in mycards %}
+					{% include 'cards.html' with {
+						 'card_title':card.card_title,
+					     'card_image':card.card_image,
+						 'card_gr':card.card_gr,
+						 'card_v':card.card_v,}%}
+				{% endfor %}-->
+				
+				{% include 'cards.html' %}
+			</div>
+			</div>
+		<a href="index.html" class="button-outline">На главную</a>
+	
+		</div>
+	</div>
+	
+	
+	{% include 'footer.html'%}
+	
+
+</body>
+</html>
