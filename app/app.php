@@ -6,6 +6,6 @@ $twig->addGlobal('link_index', "app.php");
 $twig->addGlobal('link_shop', "shop.php");
 $twig->addGlobal('link_contacts', "contacts.php");
 $twig->addGlobal('link_service', " service.php");
-$twig->addGlobal('cart_number', 0);
 $twig->addGlobal('link_box', " box.php");
-echo $twig->render('contacts.html'); ?>
+echo $twig->render('index.html'); 
+?>
