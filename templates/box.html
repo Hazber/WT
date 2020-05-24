@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Бухарик</title>
+	<link rel="shortcut icon" href="Images/Icon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="CSS/Menu.css">
+</head>
+<body>
+</head>
+<body>
+
+    <header class="header">
+       
+		{% include 'header.html'%}
+    </header>
+    
+	<div class="section">
+		<div class="container">
+			<h2 class="title">Ваша корзина</h2>
+			<h2 class="title">Итоговая сумма: {{sum}}$</h2>
+	
+			
+			<div class="card-wrapper">
+			<div class="container">
+				{% for card in mycards %}
+					{% include 'card_in_box.html' with {
+						'card_title':card.card_type,
+						'card_image':card.card_image,
+						'card_price':card.card_price,
+						'card_gr':card.card_gr,
+						'card_v':card.card_v,
+						'total_price':card.total_price,
+					'card_num':card.card_num}%}
+				{% endfor %}
+				
+				
+			</div>
+			</div>
+		<a href="box.php" class="button-outline">Заказать!</a>
+	
+		</div>
+	</div>
+	
+	
+	{% include 'footer.html'%}
+	
+
+</body>
+</html>

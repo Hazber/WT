@@ -23,8 +23,8 @@
 				<div class="container">
 					<div class="filter-navigation">
 						<!--<a href="#" class="adv__button">Connect to Us</a>-->
-			<form action="" class="subscribe">
-				<input type="text" class="subscribe__input" placeholder="Что вам нужно?">
+			<form method="post" action="shop.php" class="subscribe">
+				<input type="search" class="subscribe__input" name="search_s"  placeholder="{{form_input}}">
 				<input type="submit" class="subscribe__button" value="Найти">
 			</form>
 			<form action="" class="sort">
@@ -44,30 +44,31 @@
 				<input type="submit" class="sort__button" value="Сортировать">
 			
 			</form>
-						<a href="#" class="filter_link">Водки и водки особые</a>
-						<a href="#" class="filter_link">Ликероводочные изделия</a>
-						<a href="#" class="filter_link">Виноматериал</a>
-						<a href="#" class="filter_link">Коньяк</a>
-						<a href="#" class="filter_link">Бренди</a>
-						<a href="#" class="filter_link">Пиво</a>
+						<a href="shop.php?types=Водки и водки особые" class="filter_link">Водки и водки особые</a>
+						<a href="shop.php?types=Ликероводочные изделия" class="filter_link">Ликероводочные изделия</a>
+						<a href="shop.php?types=Виноматериал" class="filter_link">Виноматериал</a>
+						<a href="shop.php?types=Коньяк" class="filter_link">Коньяк</a>
+						<a href="shop.php?types=Бренди" class="filter_link">Бренди</a>
+						<a href="shop.php?types=Пиво" class="filter_link">Пиво</a>
 					</div>
 				</div>
 			</nav>
 			
 			<div class="card-wrapper">
 			<div class="container">
-				<!--	{% for card in mycards %}
+					{% for card in mycards %}
 					{% include 'cards.html' with {
-						 'card_title':card.card_title,
-					     'card_image':card.card_image,
+						 'card_title':card.card_type,
+						 'card_image':card.card_image,
+						 'card_price':card.card_price,
 						 'card_gr':card.card_gr,
 						 'card_v':card.card_v,}%}
-				{% endfor %}-->
+				{% endfor %}
 				
-				{% include 'cards.html' %}
+				<!--{% include 'cards.html' %}-->
 			</div>
 			</div>
-		<a href="index.html" class="button-outline">На главную</a>
+		<a href="app.php" class="button-outline">На главную</a>
 	
 		</div>
 	</div>
