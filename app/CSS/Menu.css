@@ -409,12 +409,9 @@
    }
    .container
    {
-	   margin-top: 0;
-	   margin: auto;
-	   padding: auto;
-	   grid-gap: 70px;
-       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-	   grid-template-rows: repeat(2, 100px);
+	
+	   display: flexbox;
+	   
 	   
    }
    .filter-navigation

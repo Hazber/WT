@@ -122,10 +122,11 @@
 
 .client__text
 {
-    width: 50%;
+    width: 89%;
     margin :20px;
     padding: 40px 40px 10px 40px;
     border: 10px solid #d6bfa8;
+    text-align: center;
 }
 
 
@@ -217,12 +218,16 @@ margin: 0 0 0px 0;
     
 }
 
-@media (min-width:769px)
+@media (max-width:769px)
 {
     .row{
 
         flex: 0 0 50%;
-        max-width: 50%;
+        max-width: 100%;
+    }
+    .client__text
+    {
+        width: 70%;
     }
 
 }
