@@ -11,7 +11,7 @@ function SendMessage($customer,$msg){
 		$mail->SMTPAuth   = true;
 		$mail->Host       = 'ssl://smtp.mail.ru';
 		$mail->Username   = 'hazarion@mail.ru'; 
-		$mail->Password   = 'azsxdcqawsed123'; 
+		$mail->Password   = 'хуй'; 
 		$mail->SMTPSecure = 'ssl';
 		$mail->Port       = 465;
 		$mail->setFrom('hazarion@mail.ru', 'Алексей Никитко');
